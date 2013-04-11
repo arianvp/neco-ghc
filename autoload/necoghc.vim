@@ -203,7 +203,7 @@ endfunction "}}}
 
 function! s:ghc_mod(cmd)  "{{{
   lcd `=expand('%:p:h')`
-  let l:ret = system('ghc-mod -g -package -g ghc ' . a:cmd)
+  let l:ret = system('hdevtools -g -package -g ghc ' . a:cmd)
   lcd -
   return split(l:ret, '\n')
 endfunction "}}}
@@ -290,8 +290,8 @@ function! s:dangling_import(n)"{{{
 endfunction"}}}
 
 function! necoghc#ghc_mod_version()"{{{
-  let l:ret = system('ghc-mod')
-  return get(matchlist(ret, 'ghc-mod version \(.....\)'), 1)
+  let l:ret = system('hdevtools')
+  return get(matchlist(ret, 'hdevtools version \(.....\)'), 1)
 endfunction"}}}
 
 function! s:synname(...)"{{{

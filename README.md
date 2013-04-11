@@ -1,6 +1,6 @@
 # neocomplcache-ghc (neco-ghc)
 
-A completion plugin for Haskell, using ghc-mod
+A completion plugin for Haskell, using hdevtools
 
 ## What is neco-ghc
 
@@ -22,7 +22,7 @@ ujihisa added some new features.
 
 ## Install
 
-* Install ghc-mod package by `cabal install ghc-mod`
+* Install hdevtools package by `cabal install ghc-mod`
 * Unarchive neco-ghc and put it into a dir of your &rtp.
 
 ## Usage
@@ -50,7 +50,7 @@ Show detailed information (type) of symbols.
 You can enable it by adding `let g:necoghc_enable_detailed_browse = 1` in your vimrc.
 While it is quite useful, it would take longer boot time.
 
-This feature was introduced in ghc-mod 1.11.5.
+This feature was introduced in hdevtools 1.11.5.
 
 ![](http://cache.gyazo.com/f3d2c097475021615581822eee8cb6fd.png)
 
@@ -66,4 +66,4 @@ if not, add in your .vimrc:
 
 ## License
 
-[BSD3 License](http://www.opensource.org/licenses/BSD-3-Clause), the same license as ghc-mod.
+[BSD3 License](http://www.opensource.org/licenses/BSD-3-Clause), the same license as hdevtools.
