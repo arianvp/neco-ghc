@@ -290,8 +290,8 @@ function! s:dangling_import(n)"{{{
 endfunction"}}}
 
 function! necoghc#ghc_mod_version()"{{{
-  let l:ret = system('hdevtools')
-  return get(matchlist(ret, 'hdevtools version \(.....\)'), 1)
+  let l:ret = system('hdevtools --help')
+  return get(matchlist(ret, 'hdevtools: version \(.....\)'), 1)
 endfunction"}}}
 
 function! s:synname(...)"{{{
