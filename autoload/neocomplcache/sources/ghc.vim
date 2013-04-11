@@ -46,11 +46,11 @@ function! s:source.get_complete_words(cur_keyword_pos, cur_keyword_str)
 endfunction
 
 function! neocomplcache#sources#ghc#define()
-  if !executable('ghc-mod')
+  if !executable('hdevtools')
     return {}
   endif
   let l:version = necoghc#ghc_mod_version()
-  if l:version < '1.0.8'
+  if l:version < '0.1.0.5'
     call neocomplcache#print_warning("neco-ghc requires ghc-mod 1.0.8+")
     call neocomplcache#print_warning("detected version: " . l:version)
     return {}
